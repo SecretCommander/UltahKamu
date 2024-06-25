@@ -127,6 +127,7 @@ function endlessConfetti() {
 let audio = new Audio('HBD1.mp3');
   function playAudio() {
     audio.play();
+    document.removeEventListener('mousemove', playAudio);
   }
 
   document.addEventListener('mousemove', playAudio);
