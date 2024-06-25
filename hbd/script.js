@@ -6,13 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let audioContext;
   let analyser;
   let microphone;
-  let audio = new Audio('HBD1.mp3');
-  function playAudio() {
-    audio.play();
-  }
-
-  // Add event listener to the document for mousemove event
-  document.addEventListener('mousemove', playAudio);
+  
   function updateCandleCount() {
     const activeCandles = candles.filter(
       (candle) => !candle.classList.contains("out")
@@ -129,3 +123,11 @@ function endlessConfetti() {
     });
   }, 1000);
 }
+
+let audio = new Audio('HBD1.mp3');
+  function playAudio() {
+    audio.play();
+  }
+
+  // Add event listener to the document for mousemove event
+  document.addEventListener('mousemove', playAudio);
