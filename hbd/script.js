@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let analyser;
   let microphone;
   let audio = new Audio('hbd.mp3');
-
+  audio.play();
   function updateCandleCount() {
     const activeCandles = candles.filter(
       (candle) => !candle.classList.contains("out")
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
           triggerConfetti();
           endlessConfetti(); // Start the endless confetti
         }, 200);
-        audio.play();
+        
         setTimeout(showAlert, 3000);
       }
     }
