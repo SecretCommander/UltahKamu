@@ -7,7 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let analyser;
   let microphone;
   let audio = new Audio('HBD1.mp3');
-  audio.play();
+  function playAudio() {
+    audio.play();
+  }
+
+  // Add event listener to the document for mousemove event
+  document.addEventListener('mousemove', playAudio);
   function updateCandleCount() {
     const activeCandles = candles.filter(
       (candle) => !candle.classList.contains("out")
@@ -73,11 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // If all candles are blown out, trigger confetti after a small delay
       if (candles.every((candle) => candle.classList.contains("out"))) {
-        setTimeout(function() {
+        setTimeout(function () {
           triggerConfetti();
           endlessConfetti(); // Start the endless confetti
         }, 200);
-        
+
         setTimeout(showAlert, 6000);
       }
     }
@@ -116,7 +121,7 @@ function triggerConfetti() {
 }
 
 function endlessConfetti() {
-  setInterval(function() {
+  setInterval(function () {
     confetti({
       particleCount: 200,
       spread: 90,
