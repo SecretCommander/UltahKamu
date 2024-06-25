@@ -78,8 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
           endlessConfetti(); // Start the endless confetti
         }, 200);
         audio.play();
+        setTimeout(showAlert, 3000);
       }
     }
+  }
+
+  function showAlert() {
+    alertt.style.display = "block";
+    alertt.style.opacity = 1;
   }
 
   if (navigator.mediaDevices.getUserMedia) {
