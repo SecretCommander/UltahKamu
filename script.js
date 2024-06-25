@@ -202,7 +202,7 @@ function aktipesan4() {
     vketikhalo = "Happy Birthday, " + nama + " 🎉✨";
     document.getElementById("halo").innerHTML = vketikhalo;
     kalimat.innerHTML = pesan4.innerHTML + nama + " 🥳";
-    kalimat.style = "transform:scale(1.2)";
+    kalimat.style = "transform:scale(1.3)";
     setTimeout(aktipesan5, 1000);
 }
 
