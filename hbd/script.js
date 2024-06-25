@@ -129,5 +129,4 @@ let audio = new Audio('HBD1.mp3');
     audio.play();
   }
 
-  // Add event listener to the document for mousemove event
   document.addEventListener('mousemove', playAudio);
