@@ -16,7 +16,10 @@ body {
 #card,
 #card-front,
 #card-inside {
-  height: 590px;
+  height: 650px;
+}
+#phara{
+  font-size: 1.1rem;
 }
 
 .wrap {
@@ -39,6 +42,8 @@ body {
 
 #card {
   width: 960px;
+  margin-top: 10px !important;
+  margin-bottom: 15px !important;
   margin: auto;
   transform-style: preserve-3d;
   perspective: 5000px;
