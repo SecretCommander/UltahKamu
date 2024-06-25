@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let audioContext;
   let analyser;
   let microphone;
-  let audio = new Audio('hbd.mp3');
+  let audio = new Audio('HBD1.mp3');
   audio.play();
   function updateCandleCount() {
     const activeCandles = candles.filter(
