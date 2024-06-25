@@ -1,0 +1,37 @@
+
+@keyframes slideUpAndFadeOut {
+    0% {
+        transform: translateY(0) rotateY(0);
+    }
+    50%{
+        transform: translateY(-25px) rotateY(180deg);
+    }
+    100% {
+        transform: translateY(-50px) rotateY(360deg);/* Sesuaikan dengan jarak vertikal yang diinginkan */
+    }
+}
+
+#lv1, #lv2, #lv3, #lv4 {
+    transition: opacity 0.3s ease-in-out; /* Transisi opasitas untuk efek menghilang */
+    
+    /* Atur posisi atau yang diperlukan */
+    position: relative; /* Diperlukan untuk animasi */
+}
+
+.slideUpAndFadeOut {
+    animation: slideUpAndFadeOut 0.5s forwards; /* Jalankan animasi selama 0.5 detik */
+}
+
+.swal2-cancel {
+    transition: transform 0.2s ease-in-out !important;
+}
+
+#stikertolak {
+    display: none;
+    border-radius: 50%;
+}
+
+.custom-circle-image {
+    border-radius: 50% !important;
+    object-fit: cover; /* Ensure the image covers the entire circle */
+}

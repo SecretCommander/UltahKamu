@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5'
+    name='viewport' />
+  <meta content='IE=edge' http-equiv='X-UA-Compatible' />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <link href="https://feeldreams.github.io/heihbd/style.css" rel="stylesheet" type="text/css" />
+  <link href="style1.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+
+  <style>
+    #ket2 {
+      margin-top: 25px !important;
+      font-weight: 400;
+      color: white;
+    }
+  </style>
+
+  <title>Ultah Kamu</title>
+  <link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">
+  <meta name="description" content="HTML Replit Coding">
+</head>
+
+<body>
+  <!-- Ganti Audio di sini -->
+  <audio src="CountOnMe.mp3" id="linkmp3" class="sembunyi"></audio>
+
+  <div id="bodyblur">
+    <!-- Wallpaper -->
+    <img src="korean.jpg" id="wallpaper" />
+    <div id="beneranblur"></div>
+  </div>
+
+  <div id='Content'>
+    <div id="kadoIn">
+      <!-- Tombol Surat -->
+      <img src="loveletter.png" />
+    </div>
+    <p id="ket" style="margin-top: 0px!important; margin-bottom: 2px !important;">Inget Amplop ini gak?</p>
+    <p id="ket2" style="margin-top: 0px!important;">klik amplopnya!</p>
+
+    <div class="kumpulanstiker">
+      <!-- Stiker untuk Konten -->
+      <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker" />
+      <img src="https://feeldreams.github.io/pusn.gif" id="fotostiker1" />
+      <img src="https://feeldreams.github.io/cilukba.gif" id="fotostiker2" />
+      <img src="party.gif" id="fotostiker3" />
+      <img src="https://feeldreams.github.io/pandakuning.gif" id="fotostiker4" />
+      <img src="https://feeldreams.github.io/emawh.gif" id="fotostiker5" />
+      <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker6" />
+    </div>
+
+    <p id="halo" class="halo"></p>
+
+    <div>
+      <blockquote id='bq' data-text='㋡'>
+        <p id="kalimat">Aku Ada Sesuatu Nih 🤣❤️</p>
+        <p id="pesan1">Klik 4 LOVE di Bawah! 😆❤️</p>
+        <div id="kolombaru">
+          <li id="lv1">❤️</li>
+          <li id="lv2">❤️</li>
+          <li id="lv3">❤️</li>
+          <li id="lv4">❤️</li>
+        </div>
+        <p id="pesan2">Tunggu...</p>
+        <!-- Pesan -->
+        <p id="pesan3">Ciee.. Ada yang Ultah Nih 🤣❤️</p>
+        <p id="pesan4">Selamat Ulang Tahun, </p>
+        <p id="pesan5" class="gaya2">Nambah tua aja ya, hehe</p>
+        <p id="pesanf" class="gaya2">Gimana jadi orang dewasa enak ga? wkwkwk</p>
+        <p id="pesan6" class="gaya2">Moga panjang umur biar kita bisa sama teruss 😆❤️</p>
+        <p id="pesan7" class="gaya2">Sehat selalu ya!</p>
+        <p id="pesan8" class="gaya2">Hehe, makacii ya kamu dh sukaa :)</p>
+        <p id="pesan9" class="gaya2">Oh iya, semoga di hari spesialmu ini kamu dapat menjadi pribadi yang lebih baik
+          yaa.. Tetep Semangatt sengku🥳❤️</p>
+        <p id="pesan10" class="gaya2">Happy Level Up Day!! 🥳</p>
+        <!-- Tombol Lanjut -->
+        <p id="opsL">Klik untuk Lanjut</p>
+      </blockquote>
+    </div>
+
+    <!-- Tombol Kirim Pesan -->
+    <div id="Tombol"><a id="By">&#128140; Lanjut</a></div>
+
+    <!-- Pesan Tambahan -->
+    <img id="stikertolak" src="cry.gif" />
+    <p id="katatambahan" class="sembunyi">Yeayyy, kamu sukaa 😄</p>
+
+    <!-- Pesan Ditolak -->
+    <div id="pesanditolak">
+      <img id="stikerditolak" src="yay.gif" />
+
+      <p id="kataditolak">Kok gitu cii, Sorry yaa😔</p>
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const swalst = Swal.mixin({
+      timer: 2300,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      timerProgressBar: true,
+      imageHeight: 90,
+    });
+
+    const audio = new Audio('' + linkmp3.src);
+    let ftganti = 0;
+    let fungsi = 0;
+    let fungsiAwal = 0;
+    const deffotostiker = fotostiker.src;
+    const nama = 'Wandaa'; // Ganti dengan variabel nama yang sudah disediakan
+    vketikhalo = "Hai, " + nama + " ✨";
+
+    function berjatuhan() {
+      const heart = document.createElement("div");
+      heart.className = "fas fa-snowflake";
+      heart.style.left = (Math.random() * 90) + "vw";
+      heart.style.animationDuration = (Math.random() * 3) + 2 + "s";
+      body.appendChild(heart);
+    }
+
+    setInterval(function () {
+      const heartArr = document.querySelectorAll(".fa-snowflake");
+      if (heartArr.length > 100) {
+        heartArr[0].remove();
+      }
+    }, 100);
+
+    Content.style = "opacity:1;margin-top:16vh";
+
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+      cancelButtonColor: '#FF0040',
+      imageHeight: 80,
+    });
+
+    document.getElementById("kadoIn").onclick = function () {
+      if (fungsiAwal == 0) {
+        audio.play();
+        fungsiAwal = 1;
+        kadoIn.style = "transition:all .8s ease;transform:scale(10);opacity:0";
+        wallpaper.style = "transform: scale(1.5);";
+        ket.style = "display:none !important";
+        ket2.style = "display:none !important";
+        setTimeout(initengahan, 300);
+        setTimeout(mulainama, 500);
+      }
+    }
+
+    function mulainama() {
+      document.getElementById("halo").innerHTML = vketikhalo;
+      // Lanjutkan dengan logika selanjutnya
+    }
+
+    // Variable Pertanyaan Akhir
+    const tanya = 'Kamu suka ga? 😶❤️';
+    const opstanya = 'Ayo jawab :)';
+    const tompositif = 'Suka banget';
+    const tomnegatif = 'ENGGAK';
+
+    async function menuju() {
+      // const pesanwhatsapp = "Makasii udah ngucapin " + nama + " ultah ><";
+      // await swals.fire('OK!', 'Kirim jawabannya ke WhatsApp aku, ya!', 'success');
+      // window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;
+      window.location = "HBD/xixi.html";
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
