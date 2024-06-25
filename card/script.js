@@ -2,7 +2,7 @@
   function $(id) {
     return document.getElementById(id);
   }
-  let audio = new Audio('record.mp3');
+  let audio = new Audio('record1.mp3');
   var card = $("card"),
     openB = $("open"),
     closeB = $("close"),
