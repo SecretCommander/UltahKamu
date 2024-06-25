@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
           endlessConfetti(); // Start the endless confetti
         }, 200);
         
-        setTimeout(showAlert, 3000);
+        setTimeout(showAlert, 6000);
       }
     }
   }
